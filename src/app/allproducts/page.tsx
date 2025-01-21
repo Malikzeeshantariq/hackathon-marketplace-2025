@@ -24,7 +24,7 @@ export default  async function Home() {
         <h1 className="relative z-10 text-white text-4xl font-normal pl-20 pt-10 md:pt-20">All products</h1>
       </div>
       <div >
-      <BlackFridayBanner/>
+      {await BlackFridayBanner()}
       <div className="flex flex-col items-center justify-start min-h-screen bg-gray-100 p-4">
         <ProductsView products={products} categories={categories} />
       </div>
