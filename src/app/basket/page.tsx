@@ -9,6 +9,10 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { createCheckoutSession, Metadata } from "../../../actions/createCheckoutSession";
+import Topnav from "@/components/topnav";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import Footerend from "@/components/footerend";
 
 function BasketPage() {
   const groupedItems = useBasketStore((state) => state.getGroupedItems());
@@ -54,7 +58,10 @@ const handleCheckout = async () => {
 
 };
 
-   return ( 
+   return (
+    <> 
+    <Topnav/>
+    <Header/>
    <div className="container mx-auto p-4 max-w-6xl">
      <h1 className="text-2xl font-bold mb-4">Your Basket</h1>
     <div className="flex flex-col lg:flex-row gap-8">
@@ -134,7 +141,9 @@ const handleCheckout = async () => {
             </div>
         </div>
       </div>
-     
+      <Footer/>
+      <Footerend/>
+      </>     
   );
 }
 export default BasketPage
