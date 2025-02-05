@@ -28,7 +28,7 @@ const Topnav = () => {
   
   }
   return (
-    <div className='md: bg-white h-[66px] flex justify-between items-center px-5 container mx-auto border-b-2 '>
+    <div className='md: bg-white h-[66px] flex justify-between items-center px-5 mx-auto border-b-2 '>
         <div className='hidden md:block'>
        
         </div>

@@ -1,4 +1,8 @@
+import Footer from "@/components/footer";
+import Footerend from "@/components/footerend";
+import Header from "@/components/header";
 import ProductsView from "@/components/ProductsView";
+import Topnav from "@/components/topnav";
 import { getAllCategories } from "@/sanity/lib/products/getAllCategories";
 import { getProductsByCategory } from "@/sanity/lib/products/getProductsByCategory";
 
@@ -9,7 +13,11 @@ async function CategoryPage({params}:{params: Promise<{ slug: string}>}
     const products = await getProductsByCategory(slug);
     const categories = await getAllCategories();
 
-  return  <div className="flex flex-col items-center justify-start min-h-screen bg-gray-100 p-4">
+  return (
+    <>
+    <Topnav/>
+    <Header/>
+    <div className="flex flex-col items-center justify-start min-h-screen bg-gray-100 p-4">
     <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-4xl">
        <h1 className="text-3xl font-bold mb-6 text-center">
             {slug
@@ -21,6 +29,9 @@ async function CategoryPage({params}:{params: Promise<{ slug: string}>}
         <ProductsView products={products} categories={categories}/>        
     </div>
   </div>
+  <Footer/>
+  <Footerend/>
+  </>)
 }
 
 export default CategoryPage;

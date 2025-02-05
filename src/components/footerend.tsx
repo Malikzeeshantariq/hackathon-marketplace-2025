@@ -6,7 +6,7 @@ import { RiFacebookBoxFill } from 'react-icons/ri'
 
 const Footerend = () => {
   return (
-          <div className='bg-[#2A254B] text-white h-[60px] container mx-auto grid grid-flow-col justify-between px-20 pt-5 border-t-2 border-[#4E4D93]'>
+          <div className='bg-[#2A254B] text-white h-[60px] mx-auto grid grid-flow-col justify-between px-20 pt-5 border-t-2 border-[#4E4D93]'>
             <div>
              <p>Copyright 2022 Avion LTD</p>
              </div>

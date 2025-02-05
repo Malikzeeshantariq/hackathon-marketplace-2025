@@ -18,7 +18,7 @@ export default  async function Home() {
         <Header/>
       {/* Banner Section */}
       <div
-        className="w-[390px] relative h-[146px] md:h-[209px] md:w-full bg-cover bg-center flex items-center container mx-auto"
+        className="w-[390px] relative h-[146px] md:h-[209px] md:w-full bg-cover bg-center flex items-center mx-6"
         style={{ backgroundImage: `url('All Products.png')` }}
       >
         <h1 className="relative z-10 text-white text-4xl font-normal pl-20 pt-10 md:pt-20">All products</h1>
